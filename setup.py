@@ -1,12 +1,12 @@
 import setuptools
 
-with open("README.md", "r") as fh:
+with open("README.md", mode="r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 
 def get_requirements(fname):
     "Takes requirements from requirements.txt and returns a list."
-    with open(fname) as fp:
+    with open(fname, encoding="utf-8") as fp:
         reqs = list()
         for lib in fp.read().split("\n"):
             # Ignore pypi flags and comments
